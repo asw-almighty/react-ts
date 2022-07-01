@@ -25,8 +25,12 @@ function App() {
 		},
 	];
 
+	const saveExpenseData = (expense: any) => {
+		console.log(expense);
+	}
+
 	return <div>
-    <NewExpense />
+    <NewExpense onSaveExpenseData={saveExpenseData} />
     <Expenses items={expenses} />
   </div>;
 }
